@@ -1,0 +1,29 @@
+{
+  "status": "200",
+  "executed": false,
+  "example": {
+    "decimalFormat": false,
+    "groupOne": [
+      {
+        "$ref": "#/components/schemas/GroupOneDto"
+      }
+    ],
+    "includeUsersWithoutTime": false,
+    "totals": [
+      {
+        "$ref": "#/components/schemas/TimeEntryReportTotals"
+      }
+    ],
+    "totalsByDay": [
+      {
+        "$ref": "#/components/schemas/DailyTotalDto"
+      }
+    ],
+    "trackTimeDownToSeconds": false,
+    "usersWithoutTime": [
+      {
+        "$ref": "#/components/schemas/UserDto"
+      }
+    ]
+  }
+}

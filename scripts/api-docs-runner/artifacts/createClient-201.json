@@ -1,0 +1,16 @@
+{
+  "status": "201",
+  "executed": false,
+  "example": {
+    "address": "Ground Floor, ABC Bldg., Palo Alto, California, USA 94020",
+    "archived": false,
+    "ccEmails": "clientx@example.com",
+    "currencyCode": "USD",
+    "currencyId": "33t687e29ae1f428e7ebe505",
+    "email": "clientx@example.com",
+    "id": "44a687e29ae1f428e7ebe305",
+    "name": "Client X",
+    "note": "This is a sample note for the client.",
+    "workspaceId": "64a687e29ae1f428e7ebe303"
+  }
+}

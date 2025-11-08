@@ -1,0 +1,11 @@
+{
+  "status": "200",
+  "executed": false,
+  "example": {
+    "entities": [
+      {
+        "$ref": "#/components/schemas/AttendanceDto"
+      }
+    ]
+  }
+}

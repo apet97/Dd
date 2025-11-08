@@ -1,0 +1,9 @@
+{
+  "status": "200",
+  "executed": false,
+  "example": [
+    {
+      "$ref": "#/components/schemas/TaskDtoV1"
+    }
+  ]
+}

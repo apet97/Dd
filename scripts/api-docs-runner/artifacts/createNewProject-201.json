@@ -1,0 +1,43 @@
+{
+  "status": "201",
+  "executed": false,
+  "example": {
+    "archived": false,
+    "billable": false,
+    "budgetEstimate": {
+      "$ref": "#/components/schemas/EstimateWithOptionsDto"
+    },
+    "clientId": "9t641568b07987035750704",
+    "clientName": "Client X",
+    "color": "#000000",
+    "costRate": {
+      "$ref": "#/components/schemas/RateDtoV1"
+    },
+    "duration": "60000",
+    "estimate": {
+      "$ref": "#/components/schemas/EstimateDtoV1"
+    },
+    "estimateReset": {
+      "$ref": "#/components/schemas/EstimateResetDto"
+    },
+    "hourlyRate": {
+      "$ref": "#/components/schemas/RateDtoV1"
+    },
+    "id": "5b641568b07987035750505e",
+    "isPublic": false,
+    "isTemplate": false,
+    "memberships": [
+      {
+        "$ref": "#/components/schemas/MembershipDtoV1"
+      }
+    ],
+    "name": "Software Development",
+    "note": "This is a sample note for the project.",
+    "public": false,
+    "template": false,
+    "timeEstimate": {
+      "$ref": "#/components/schemas/TimeEstimateDto"
+    },
+    "workspaceId": "64a687e29ae1f428e7ebe303"
+  }
+}

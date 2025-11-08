@@ -1,0 +1,24 @@
+{
+  "status": "200",
+  "executed": false,
+  "example": {
+    "assignments": [
+      {
+        "$ref": "#/components/schemas/AssignmentPerDayDto"
+      }
+    ],
+    "clientName": "Software Development",
+    "milestones": [
+      {
+        "$ref": "#/components/schemas/MilestoneDto"
+      }
+    ],
+    "projectArchived": false,
+    "projectBillable": false,
+    "projectColor": "#000000",
+    "projectId": "56b687e29ae1f428e7ebe504",
+    "projectName": "Software Development",
+    "totalHours": 490.5,
+    "workspaceId": "64a687e29ae1f428e7ebe303"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "status": "201",
+  "executed": false,
+  "example": {
+    "archived": false,
+    "hasUnitPrice": false,
+    "id": "89a687e29ae1f428e7ebe303",
+    "name": "Procurement",
+    "priceInCents": 1000,
+    "unit": "piece",
+    "workspaceId": "64a687e29ae1f428e7ebe303"
+  }
+}

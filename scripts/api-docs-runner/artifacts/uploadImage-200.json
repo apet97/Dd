@@ -1,0 +1,8 @@
+{
+  "status": "200",
+  "executed": false,
+  "example": {
+    "name": "image-01234567.jpg",
+    "url": "https://clockify.com/image-01234567.jpg"
+  }
+}

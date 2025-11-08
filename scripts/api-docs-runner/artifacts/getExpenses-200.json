@@ -1,0 +1,19 @@
+{
+  "status": "200",
+  "executed": false,
+  "example": {
+    "dailyTotals": [
+      {
+        "$ref": "#/components/schemas/ExpenseDailyTotalsDtoV1"
+      }
+    ],
+    "expenses": {
+      "$ref": "#/components/schemas/ExpensesWithCountDtoV1"
+    },
+    "weeklyTotals": [
+      {
+        "$ref": "#/components/schemas/ExpenseWeeklyTotalsDtoV1"
+      }
+    ]
+  }
+}

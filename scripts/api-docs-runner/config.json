@@ -1,0 +1,10 @@
+{
+  "baseUrl": "https://developer.clockify.me",
+  "prodBaseUrl": "https://api.clockify.me",
+  "workspaceId": "672f9cf4ad6f45299c3e3de2",
+  "headers": {
+    "X-Api-Key": "NmRhMDBhOWYtM2Q2Yy00NGRhLWJlMGItODNmMTc5YmE2YmVl",
+    "Accept": "application/json"
+  },
+  "defaultContentType": "application/json"
+}

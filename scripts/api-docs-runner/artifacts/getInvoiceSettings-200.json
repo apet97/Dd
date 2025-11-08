@@ -1,0 +1,15 @@
+{
+  "status": "200",
+  "executed": false,
+  "example": {
+    "defaults": {
+      "$ref": "#/components/schemas/InvoiceDefaultSettingsDto"
+    },
+    "exportFields": {
+      "$ref": "#/components/schemas/InvoiceExportFields"
+    },
+    "labels": {
+      "$ref": "#/components/schemas/LabelsCustomization"
+    }
+  }
+}

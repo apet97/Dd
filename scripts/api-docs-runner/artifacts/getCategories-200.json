@@ -1,0 +1,12 @@
+{
+  "status": "200",
+  "executed": false,
+  "example": {
+    "categories": [
+      {
+        "$ref": "#/components/schemas/ExpenseCategoryDtoV1"
+      }
+    ],
+    "count": 20
+  }
+}

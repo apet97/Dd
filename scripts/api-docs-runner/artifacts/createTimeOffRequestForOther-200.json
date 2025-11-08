@@ -1,0 +1,27 @@
+{
+  "status": "200",
+  "executed": false,
+  "example": {
+    "balance": 10,
+    "balanceDiff": 1,
+    "createdAt": "2022-08-26T08:32:01.640708Z",
+    "id": "5b715612b079875110791111",
+    "note": "Time Off Request Note",
+    "policyId": "5b715612b079875110792333",
+    "policyName": "Days",
+    "requesterUserId": "5b715612b0798751107925555",
+    "requesterUserName": "John",
+    "status": {
+      "$ref": "#/components/schemas/TimeOffRequestStatus"
+    },
+    "timeOffPeriod": {
+      "$ref": "#/components/schemas/TimeOffRequestPeriodDto"
+    },
+    "timeUnit": "DAYS",
+    "userEmail": "nicholas@clockify.com",
+    "userId": "5b715612b079875110794444",
+    "userName": "Nicholas",
+    "userTimeZone": "Europe/Budapest",
+    "workspaceId": "5b715612b079875110792222"
+  }
+}
