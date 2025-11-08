@@ -1,0 +1,24 @@
+{
+  "body": {
+    "code": 501,
+    "message": "Client doesn't belong to Workspace"
+  },
+  "headers": {
+    "cache-control": "no-cache, no-store, max-age=0, must-revalidate",
+    "content-length": "59",
+    "content-type": "application/json",
+    "date": "Sat, 08 Nov 2025 15:41:15 GMT",
+    "expected-client-version": "1.0.0",
+    "expires": "0",
+    "pragma": "no-cache",
+    "server": "envoy",
+    "strict-transport-security": "max-age=31536000 ; includeSubDomains",
+    "vary": "Origin,Access-Control-Request-Method,Access-Control-Request-Headers",
+    "x-auth-checksum": "34bedda0bff01958153ebbf3707327b8528cf50c733da27903de8db459f4290e",
+    "x-content-type-options": "nosniff",
+    "x-envoy-upstream-service-time": "42",
+    "x-frame-options": "DENY",
+    "x-xss-protection": "0"
+  },
+  "status": 400
+}

@@ -1,0 +1,32 @@
+{
+  "body": {
+    "address": null,
+    "archived": false,
+    "ccEmails": null,
+    "currencyCode": "USD",
+    "currencyId": "672f9cf4ad6f45299c3e3de3",
+    "email": "docs_test_20251108t154112z@example.com",
+    "id": "690f6498c0ee2a5143bd3dab",
+    "name": "DOCS_TEST_20251108T154112Z_CLIENT",
+    "note": "Sandbox documentation seed client",
+    "workspaceId": "672f9cf4ad6f45299c3e3de2"
+  },
+  "headers": {
+    "cache-control": "no-cache, no-store, max-age=0, must-revalidate",
+    "content-length": "318",
+    "content-type": "application/json",
+    "date": "Sat, 08 Nov 2025 15:41:12 GMT",
+    "expected-client-version": "1.0.0",
+    "expires": "0",
+    "pragma": "no-cache",
+    "server": "envoy",
+    "strict-transport-security": "max-age=31536000 ; includeSubDomains",
+    "vary": "Origin,Access-Control-Request-Method,Access-Control-Request-Headers",
+    "x-auth-checksum": "34bedda0bff01958153ebbf3707327b8528cf50c733da27903de8db459f4290e",
+    "x-content-type-options": "nosniff",
+    "x-envoy-upstream-service-time": "101",
+    "x-frame-options": "DENY",
+    "x-xss-protection": "0"
+  },
+  "status": 201
+}

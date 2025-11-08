@@ -1,0 +1,18 @@
+{
+  "headers": {
+    "Accept": "application/json",
+    "Accept-Encoding": "gzip, deflate",
+    "Connection": "keep-alive",
+    "Content-Type": "application/json",
+    "User-Agent": "python-requests/2.32.5",
+    "X-Api-Key": "REDACTED"
+  },
+  "json": {
+    "email": "docs_test_20251108t154112z@example.com",
+    "name": "DOCS_TEST_20251108T154112Z_CLIENT",
+    "note": "Sandbox documentation seed client"
+  },
+  "method": "POST",
+  "params": {},
+  "url": "https://developer.clockify.me/api/v1/workspaces/672f9cf4ad6f45299c3e3de2/clients"
+}

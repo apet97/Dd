@@ -1,0 +1,14 @@
+{
+  "headers": {
+    "Accept": "application/json",
+    "Accept-Encoding": "gzip, deflate",
+    "Connection": "keep-alive",
+    "Content-Type": "application/json",
+    "User-Agent": "python-requests/2.32.5",
+    "X-Api-Key": "REDACTED"
+  },
+  "json": null,
+  "method": "GET",
+  "params": {},
+  "url": "https://developer.clockify.me/api/v1/workspaces/672f9cf4ad6f45299c3e3de2/clients/690f6498c0ee2a5143bd3dab"
+}
