@@ -1,0 +1,12 @@
+{
+  "status": "200",
+  "executed": false,
+  "example": {
+    "count": 1,
+    "requests": [
+      {
+        "$ref": "#/components/schemas/TimeOffRequestFullV1Dto"
+      }
+    ]
+  }
+}

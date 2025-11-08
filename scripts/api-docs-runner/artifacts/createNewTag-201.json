@@ -1,0 +1,10 @@
+{
+  "status": "201",
+  "executed": false,
+  "example": {
+    "archived": false,
+    "id": "21s687e29ae1f428e7ebe404",
+    "name": "Sprint1",
+    "workspaceId": "64a687e29ae1f428e7ebe303"
+  }
+}

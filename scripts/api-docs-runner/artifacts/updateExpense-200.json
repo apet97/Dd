@@ -1,0 +1,20 @@
+{
+  "status": "200",
+  "executed": false,
+  "example": {
+    "billable": false,
+    "categoryId": "45y687e29ae1f428e7ebe890",
+    "date": "2020-01-01",
+    "fileId": "745687e29ae1f428e7ebe890",
+    "id": "64c777ddd3fcab07cfbb210c",
+    "isLocked": false,
+    "locked": false,
+    "notes": "This is a sample note for this expense.",
+    "projectId": "25b687e29ae1f428e7ebe123",
+    "quantity": 0,
+    "taskId": "25b687e29ae1f428e7ebe123",
+    "total": 10500.5,
+    "userId": "89b687e29ae1f428e7ebe912",
+    "workspaceId": "64a687e29ae1f428e7ebe303"
+  }
+}

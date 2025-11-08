@@ -1,0 +1,16 @@
+{
+  "status": "200",
+  "executed": false,
+  "example": {
+    "timeEntries": [
+      {
+        "$ref": "#/components/schemas/TimeEntryDto"
+      }
+    ],
+    "totals": [
+      {
+        "$ref": "#/components/schemas/TimeEntryReportTotals"
+      }
+    ]
+  }
+}

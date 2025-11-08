@@ -1,0 +1,38 @@
+{
+  "status": "200",
+  "executed": false,
+  "example": {
+    "cakeOrganizationId": "67d471fb56aa9668b7bfa295",
+    "costRate": {
+      "$ref": "#/components/schemas/RateDtoV1"
+    },
+    "currencies": [
+      {
+        "$ref": "#/components/schemas/CurrencyWithDefaultInfoDtoV1"
+      }
+    ],
+    "featureSubscriptionType": {
+      "$ref": "#/components/schemas/FeatureSubscriptionType"
+    },
+    "features": {
+      "$ref": "#/components/schemas/Feature"
+    },
+    "hourlyRate": {
+      "$ref": "#/components/schemas/HourlyRateDtoV1"
+    },
+    "id": "64a687e29ae1f428e7ebe303",
+    "imageUrl": "https://www.url.com/imageurl-1234567890.jpg",
+    "memberships": [
+      {
+        "$ref": "#/components/schemas/MembershipDtoV1"
+      }
+    ],
+    "name": "Cool Company",
+    "subdomain": {
+      "$ref": "#/components/schemas/WorkspaceSubdomainDtoV1"
+    },
+    "workspaceSettings": {
+      "$ref": "#/components/schemas/WorkspaceSettingsDtoV1"
+    }
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "status": "201",
+  "executed": false,
+  "example": {
+    "amount": 100,
+    "balance": 50,
+    "billFrom": "Business X",
+    "calculationType": {
+      "$ref": "#/components/schemas/CalculationType"
+    },
+    "clientAddress": "Ground Floor, ABC Bldg., Palo Alto, California, USA 94020",
+    "clientId": "98h687e29ae1f428e7ebe707",
+    "clientName": "Client X",
+    "companyId": "04g687e29ae1f428e7ebe123",
+    "containsImportedExpenses": false,
+    "containsImportedTimes": false,
+    "currency": "USD",
+    "discount": 10.5,
+    "discountAmount": 11,
+    "dueDate": "2020-06-01T08:00:00Z",
+    "id": "78a687e29ae1f428e7ebe303",
+    "issuedDate": "2020-01-01T08:00:00Z",
+    "items": [
+      {
+        "$ref": "#/components/schemas/InvoiceItemDto"
+      }
+    ],
+    "note": "This is a sample note for this invoice.",
+    "number": "202306121129",
+    "paid": 50,
+    "status": "PAID",
+    "subject": "January salary",
+    "subtotal": 5000,
+    "tax": 1.5,
+    "tax2": 0,
+    "tax2Amount": 0,
+    "taxAmount": 1,
+    "taxType": {
+      "$ref": "#/components/schemas/TaxType"
+    },
+    "userId": "12t687e29ae1f428e7ebe202",
+    "visibleZeroFields": {
+      "$ref": "#/components/schemas/VisibleZeroFieldsInvoice"
+    }
+  }
+}

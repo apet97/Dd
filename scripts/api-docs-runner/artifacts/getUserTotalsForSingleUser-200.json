@@ -1,0 +1,18 @@
+{
+  "status": "200",
+  "executed": false,
+  "example": {
+    "capacityPerDay": 25200,
+    "totalHoursPerDay": [
+      {
+        "$ref": "#/components/schemas/TotalsPerDayDto"
+      }
+    ],
+    "userId": "72k687e29ae1f428e7ebe109",
+    "userImage": "string",
+    "userName": "John Doe",
+    "userStatus": "ACTIVE",
+    "workingDays": "[\"MONDAY\",\"TUESDAY\",\"WEDNESDAY\",\"THURSDAY\",\"FRIDAY\"]",
+    "workspaceId": "64a687e29ae1f428e7ebe303"
+  }
+}

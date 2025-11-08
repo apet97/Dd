@@ -1,0 +1,12 @@
+{
+  "status": "200",
+  "executed": false,
+  "example": {
+    "count": 2,
+    "reports": [
+      {
+        "$ref": "#/components/schemas/SharedReportDtoV1"
+      }
+    ]
+  }
+}

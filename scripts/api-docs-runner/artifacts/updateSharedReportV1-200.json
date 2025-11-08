@@ -1,0 +1,25 @@
+{
+  "status": "200",
+  "executed": false,
+  "example": {
+    "filter": {
+      "$ref": "#/components/schemas/ReportFilterV1"
+    },
+    "fixedDate": false,
+    "id": "5b715612b079875110791111",
+    "isPublic": false,
+    "name": "Weekly 1",
+    "type": "WEEKLY",
+    "userId": "5b715612b079875110791113",
+    "visibleToUserGroups": [
+      "5b715612b079875110791342",
+      "5b715612b079875110791324",
+      "5b715612b079875110793142"
+    ],
+    "visibleToUsers": [
+      "5b715612b079875110791432",
+      "5b715612b079875110791234"
+    ],
+    "workspaceId": "5b715612b079875110791112"
+  }
+}
