@@ -1,112 +1,112 @@
-# PUT /api/v1/workspaces/{workspaceId}/clients/{id}
+## PUT /v1/workspaces/{workspaceId}/clients/{id}
+**Summary:** Update client
 
-**Summary:** Update an existing client's details.
+### Path parameters
+| Name | In | Type | Required | Default | Description |
+|------|----|------|----------|---------|-------------|
+| `id` | path | string | Yes |  | Represents client identifier across the system. |
+| `workspaceId` | path | string | Yes |  | Represents workspace identifier across the system. |
 
-## Path parameters
-| Name | Type | Required | Description |
-|------|------|----------|-------------|
-| `workspaceId` | string | Yes | Clockify workspace identifier. |
-| `id` | string | Yes | Client ID returned when the client was created. |
+### Query parameters
+| Name | In | Type | Required | Default | Description |
+|------|----|------|----------|---------|-------------|
+| `archive-projects` | query | boolean | No |  | - |
+| `mark-tasks-as-done` | query | boolean | No |  | - |
 
-## Query parameters
-_None._
+### Header parameters
+No parameters.
 
-## Request body
-- **Content type:** `application/json`
-- **Schema highlights:**
-  - `name` (string, optional) – Updated display name.
-  - `email` (string, optional) – Updated contact email.
-  - `note` (string, optional) – Internal note.
-  - `address` (string, optional) – Mailing address.
-
-**Example used in sandbox:**
+### Request body
+- **Media type:** `application/json`
+- **Required:** Yes
+- **Schema summary:**
+- `address` (string, optional) Represents client's address.
+- `archived` (boolean, optional) Indicates if client will be archived or not.
+- `ccEmails` (array, optional) 
+- `currencyId` (string, optional) Represents currency identifier across the system.
+- `email` (string, optional) Represents client email.
+- `name` (string, optional) Represents client name.
+- `note` (string, optional) Represents additional notes for the client.
+- **Minimal example:**
 ```json
 {
-  "address": "123 Documentation Street",
-  "email": "docs_test_20251108t154112z+updated@example.com",
-  "name": "DOCS_TEST_20251108T154112Z_CLIENT_UPDATED",
-  "note": "Updated note for sandbox documentation seed client"
+  "address": "Ground Floor, ABC Bldg., Palo Alto, California, USA 94020",
+  "archived": false,
+  "ccEmails": [
+    "string"
+  ],
+  "currencyId": "53a687e29ae1f428e7ebe888",
+  "email": "clientx@example.com",
+  "name": "Client X",
+  "note": "This is a sample note for the client."
 }
 ```
 
-## Examples
-### curl
+### Code examples
 ```bash
-curl -X PUT "https://developer.clockify.me/api/v1/workspaces/672f9cf4ad6f45299c3e3de2/clients/690f6498c0ee2a5143bd3dab" \
+curl -X PUT "https://developer.clockify.me/v1/workspaces/{workspaceId}/clients/{id}" \
   -H 'X-Api-Key: <YOUR_API_KEY>' \
   -H 'Accept: application/json' \
-  -H 'Content-Type: application/json' \
-  -d '{"address":"123 Documentation Street","email":"docs_test_20251108t154112z+updated@example.com","name":"DOCS_TEST_20251108T154112Z_CLIENT_UPDATED","note":"Updated note for sandbox documentation seed client"}'
+  -H 'Content-Type: application/json'
+  -d '{"address":"Ground Floor, ABC Bldg., Palo Alto, California, USA 94020","archived":false,"ccEmails":["string"],"currencyId":"53a687e29ae1f428e7ebe888","email":"clientx@example.com","name":"Client X","note":"This is a sample note for the client."}'
 ```
 
-### Node.js (fetch)
 ```javascript
 import fetch from 'node-fetch';
 
-const response = await fetch('https://developer.clockify.me/api/v1/workspaces/672f9cf4ad6f45299c3e3de2/clients/690f6498c0ee2a5143bd3dab', {
+const response = await fetch('https://developer.clockify.me/v1/workspaces/{workspaceId}/clients/{id}', {
   method: 'PUT',
   headers: {
     'X-Api-Key': process.env.CLOCKIFY_API_KEY,
     'Accept': 'application/json',
-    'Content-Type': 'application/json'
+    'Content-Type': 'application/json',
   },
-  body: JSON.stringify({
-    address: '123 Documentation Street',
-    email: 'docs_test_20251108t154112z+updated@example.com',
-    name: 'DOCS_TEST_20251108T154112Z_CLIENT_UPDATED',
-    note: 'Updated note for sandbox documentation seed client'
-  })
+  body: JSON.stringify(/* TODO: provide payload */),
 });
-
 const data = await response.json();
 console.log(data);
 ```
 
-### Python (requests)
 ```python
 import os
 import requests
 
-url = "https://developer.clockify.me/api/v1/workspaces/672f9cf4ad6f45299c3e3de2/clients/690f6498c0ee2a5143bd3dab"
-payload = {
-    "address": "123 Documentation Street",
-    "email": "docs_test_20251108t154112z+updated@example.com",
-    "name": "DOCS_TEST_20251108T154112Z_CLIENT_UPDATED",
-    "note": "Updated note for sandbox documentation seed client",
+url = 'https://developer.clockify.me/v1/workspaces/{workspaceId}/clients/{id}'
+headers = {
+    'X-Api-Key': os.environ['CLOCKIFY_API_KEY'],
+    'Accept': 'application/json',
+    'Content-Type': 'application/json',
 }
-response = requests.put(
-    url,
-    headers={
-        "X-Api-Key": os.environ["CLOCKIFY_API_KEY"],
-        "Accept": "application/json",
-        "Content-Type": "application/json",
-    },
-    json=payload,
-)
+payload = {/* TODO: provide payload */}
+response = requests.put(url, headers=headers, json=payload)
 response.raise_for_status()
 print(response.json())
 ```
 
-## Successful response
-**Status 200 – OK**
-
-````json
+### Success responses
+#### Status 200
+- Media type: `application/json`
+- Description: OK
+- Captured example: Not executed in sandbox yet.
+- Artifact: `scripts/api-docs-runner/artifacts/updateClient-200.json`
+```json
 {
-  "address": "123 Documentation Street",
+  "address": "Ground Floor, ABC Bldg., Palo Alto, California, USA 94020",
   "archived": false,
-  "ccEmails": null,
-  "currencyId": "672f9cf4ad6f45299c3e3de3",
-  "email": "docs_test_20251108t154112z+updated@example.com",
-  "id": "690f6498c0ee2a5143bd3dab",
-  "name": "DOCS_TEST_20251108T154112Z_CLIENT_UPDATED",
-  "note": "Updated note for sandbox documentation seed client",
-  "workspaceId": "672f9cf4ad6f45299c3e3de2"
+  "ccEmails": "clientx@example.com",
+  "currencyId": "33t687e29ae1f428e7ebe505",
+  "email": "clientx@example.com",
+  "id": "44a687e29ae1f428e7ebe305",
+  "name": "Client X",
+  "note": "This is a sample note for the client.",
+  "workspaceId": "64a687e29ae1f428e7ebe303"
 }
-````
+```
 
-Full artifact: `scripts/api-docs-runner/artifacts/updateClient/response-200.json`
+### Error responses
+No error responses documented in the spec.
 
-## Notes
-- Only supplied fields are updated; omit fields to leave them unchanged.
+### Notes
+- Servers declared in spec: /api, /pto
 
 [Back to section](README.md) · [Back to index](../index.md)

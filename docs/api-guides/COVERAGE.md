@@ -14,11 +14,11 @@
 | createApprovalForOther | POST | `/v1/workspaces/{workspaceId}/approval-requests/users/{userId}` | No | `scripts/api-docs-runner/artifacts/createApprovalForOther-*.json` |
 | resubmitApprovalRequestForOther | POST | `/v1/workspaces/{workspaceId}/approval-requests/users/{userId}/resubmit-entries-for-approval` | No | `scripts/api-docs-runner/artifacts/resubmitApprovalRequestForOther-*.json` |
 | updateApprovalStatus | PATCH | `/v1/workspaces/{workspaceId}/approval-requests/{approvalRequestId}` | No | `scripts/api-docs-runner/artifacts/updateApprovalStatus-*.json` |
-| getClients | GET | `/v1/workspaces/{workspaceId}/clients` | Yes | `scripts/api-docs-runner/artifacts/getClients/response-200.json` |
-| createClient | POST | `/v1/workspaces/{workspaceId}/clients` | Yes | `scripts/api-docs-runner/artifacts/createClient/response-201.json` |
-| deleteClient | DELETE | `/v1/workspaces/{workspaceId}/clients/{id}` | Yes | `scripts/api-docs-runner/artifacts/deleteClient/response-200.json` |
-| getClient | GET | `/v1/workspaces/{workspaceId}/clients/{id}` | Yes | `scripts/api-docs-runner/artifacts/getClient/response-200.json` |
-| updateClient | PUT | `/v1/workspaces/{workspaceId}/clients/{id}` | Yes | `scripts/api-docs-runner/artifacts/updateClient/response-200.json` |
+| getClients | GET | `/v1/workspaces/{workspaceId}/clients` | No | `scripts/api-docs-runner/artifacts/getClients-*.json` |
+| createClient | POST | `/v1/workspaces/{workspaceId}/clients` | No | `scripts/api-docs-runner/artifacts/createClient-*.json` |
+| deleteClient | DELETE | `/v1/workspaces/{workspaceId}/clients/{id}` | No | `scripts/api-docs-runner/artifacts/deleteClient-*.json` |
+| getClient | GET | `/v1/workspaces/{workspaceId}/clients/{id}` | No | `scripts/api-docs-runner/artifacts/getClient-*.json` |
+| updateClient | PUT | `/v1/workspaces/{workspaceId}/clients/{id}` | No | `scripts/api-docs-runner/artifacts/updateClient-*.json` |
 | setWorkspaceCostRate | PUT | `/v1/workspaces/{workspaceId}/cost-rate` | No | `scripts/api-docs-runner/artifacts/setWorkspaceCostRate-*.json` |
 | ofWorkspace | GET | `/v1/workspaces/{workspaceId}/custom-fields` | No | `scripts/api-docs-runner/artifacts/ofWorkspace-*.json` |
 | create | POST | `/v1/workspaces/{workspaceId}/custom-fields` | No | `scripts/api-docs-runner/artifacts/create-*.json` |

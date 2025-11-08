@@ -1,47 +1,40 @@
 # Client API
 
-## Summary
-Manage workspace clients including creation, lookup, updates, and archival via the Clockify sandbox API. The runner exercises each operation with dedicated test records so the examples below reflect live responses.
+**Summary:** 
 
-- **Base URL (sandbox testing):** `https://developer.clockify.me`
-
-## Authentication
-All requests use the API key header.
-
-```http
-X-Api-Key: <your-api-key>
-Accept: application/json
-Content-Type: application/json
-```
-
-## Entity model quick map
-| Field | Description |
-|-------|-------------|
-| `workspaceId` | Workspace that owns the client. |
-| `id` (`clientId`) | Unique identifier for a client within a workspace. |
-
-## Prerequisites
-The runner automatically provisions a client named with the `DOCS_TEST_<timestamp>` prefix inside workspace `672f9cf4ad6f45299c3e3de2`, executes the operations below, and deletes the record when finished.
+- **Base URL (sandbox):** https://developer.clockify.me
+- **Authentication:**
+  ```
+  X-Api-Key: <YOUR_API_KEY>
+  Accept: application/json
+  Content-Type: application/json
+  ```
+- **Entity identifiers:**
+- Workspace ID
+- Resource IDs as described per operation
+- **Prerequisites:** The automated runner has not yet provisioned fixtures. Future runs should create DOCS_TEST_* resources as needed.
 
 ## Operations
-| Method | Path | Summary | Example |
-|--------|------|---------|---------|
-| POST | `/api/v1/workspaces/{workspaceId}/clients` | Add a new client | [createClient.md](createClient.md) |
-| GET | `/api/v1/workspaces/{workspaceId}/clients` | List clients in a workspace | [getClients.md](getClients.md) |
-| GET | `/api/v1/workspaces/{workspaceId}/clients/{id}` | Retrieve a single client | [getClient.md](getClient.md) |
-| PUT | `/api/v1/workspaces/{workspaceId}/clients/{id}` | Update client details | [updateClient.md](updateClient.md) |
-| DELETE | `/api/v1/workspaces/{workspaceId}/clients/{id}` | Delete a client | [deleteClient.md](deleteClient.md) |
+| Method | Path | Operation |
+|--------|------|-----------|
+| GET | `/v1/workspaces/{workspaceId}/clients` | [getClients.md](getClients.md) |
+| POST | `/v1/workspaces/{workspaceId}/clients` | [createClient.md](createClient.md) |
+| DELETE | `/v1/workspaces/{workspaceId}/clients/{id}` | [deleteClient.md](deleteClient.md) |
+| GET | `/v1/workspaces/{workspaceId}/clients/{id}` | [getClient.md](getClient.md) |
+| PUT | `/v1/workspaces/{workspaceId}/clients/{id}` | [updateClient.md](updateClient.md) |
 
 ## Common query parameters
-| Parameter | Type | Default | Notes |
-|-----------|------|---------|-------|
-| `page` | integer | `1` | 1-indexed page number for paginated listings. |
-| `page-size` | integer | `50` | Maximum results per page (Clockify allows up to 500). |
+- `archive-projects`
+- `archived`
+- `mark-tasks-as-done`
+- `name`
+- `page`
+- `page-size`
+- `sort-column`
+- `sort-order`
 
 ## Error reference
-| Status | Message | Fix |
-|--------|---------|-----|
-| 400 | `Client doesn't belong to Workspace` | Ensure the `{id}` exists in the target workspace or recreate the client before retrying. |
+No shared error patterns documented yet.
 
 ## Cleanup policy
-`run.py` deletes every `DOCS_TEST_*` client it creates at the end of the run and records the deletion response for audit.
+The runner tracks all DOCS_TEST_* resources it would create and would delete them when cleanup is implemented.

@@ -1,88 +1,80 @@
-# GET /api/v1/workspaces/{workspaceId}/clients
+## GET /v1/workspaces/{workspaceId}/clients
+**Summary:** Find clients on workspace
 
-**Summary:** Find clients on a workspace with pagination support.
+### Path parameters
+| Name | In | Type | Required | Default | Description |
+|------|----|------|----------|---------|-------------|
+| `workspaceId` | path | string | Yes |  | Represents workspace identifier across the system. |
 
-## Path parameters
-| Name | Type | Required | Description |
-|------|------|----------|-------------|
-| `workspaceId` | string | Yes | Clockify workspace identifier. |
+### Query parameters
+| Name | In | Type | Required | Default | Description |
+|------|----|------|----------|---------|-------------|
+| `name` | query | string | No |  | Filters client results that matches with the string provided in their client name. |
+| `sort-column` | query | string | No | `NAME` | Column name that will be used as criteria for sorting results. |
+| `sort-order` | query | string | No | `ASCENDING` | Sorting mode |
+| `page` | query | integer | No | `1` | Page number. |
+| `page-size` | query | integer | No | `50` | Page size. |
+| `archived` | query | boolean | No |  | Filter whether to include archived clients or not. |
 
-## Query parameters
-| Name | Type | Required | Description |
-|------|------|----------|-------------|
-| `page` | integer | No (defaults to `1`) | Page index (1-based). |
-| `page-size` | integer | No (defaults to `50`) | Number of records per page (max 500). |
+### Header parameters
+No parameters.
 
-## Examples
-### curl
+### Request body
+This operation does not accept a request body.
+
+### Code examples
 ```bash
-curl "https://developer.clockify.me/api/v1/workspaces/672f9cf4ad6f45299c3e3de2/clients?page=1&page-size=50" \
+curl -X GET "https://developer.clockify.me/v1/workspaces/{workspaceId}/clients" \
   -H 'X-Api-Key: <YOUR_API_KEY>' \
   -H 'Accept: application/json'
 ```
 
-### Node.js (fetch)
 ```javascript
 import fetch from 'node-fetch';
 
-const url = new URL('https://developer.clockify.me/api/v1/workspaces/672f9cf4ad6f45299c3e3de2/clients');
-url.searchParams.set('page', '1');
-url.searchParams.set('page-size', '50');
-
-const response = await fetch(url, {
+const response = await fetch('https://developer.clockify.me/v1/workspaces/{workspaceId}/clients', {
+  method: 'GET',
   headers: {
     'X-Api-Key': process.env.CLOCKIFY_API_KEY,
-    'Accept': 'application/json'
-  }
+    'Accept': 'application/json',
+  },
 });
-
 const data = await response.json();
 console.log(data);
 ```
 
-### Python (requests)
 ```python
 import os
 import requests
 
-url = "https://developer.clockify.me/api/v1/workspaces/672f9cf4ad6f45299c3e3de2/clients"
-params = {"page": 1, "page-size": 50}
-response = requests.get(
-    url,
-    headers={
-        "X-Api-Key": os.environ["CLOCKIFY_API_KEY"],
-        "Accept": "application/json",
-    },
-    params=params,
-)
+url = 'https://developer.clockify.me/v1/workspaces/{workspaceId}/clients'
+headers = {
+    'X-Api-Key': os.environ['CLOCKIFY_API_KEY'],
+    'Accept': 'application/json',
+}
+response = requests.get(url, headers=headers)
 response.raise_for_status()
 print(response.json())
 ```
 
-## Successful response
-**Status 200 – OK**
-
-````json
+### Success responses
+#### Status 200
+- Media type: `application/json`
+- Description: OK
+- Captured example: Not executed in sandbox yet.
+- Artifact: `scripts/api-docs-runner/artifacts/getClients-200.json`
+```json
 [
   {
-    "address": null,
-    "archived": false,
-    "ccEmails": null,
-    "currencyCode": "USD",
-    "currencyId": "672f9cf4ad6f45299c3e3de3",
-    "email": "docs_test_20251108t154112z@example.com",
-    "id": "690f6498c0ee2a5143bd3dab",
-    "name": "DOCS_TEST_20251108T154112Z_CLIENT",
-    "note": "Sandbox documentation seed client",
-    "workspaceId": "672f9cf4ad6f45299c3e3de2"
+    "$ref": "#/components/schemas/ClientWithCurrencyDtoV1"
   }
 ]
-````
+```
 
-- `total-count` response header reflects the total number of clients. In this run it was `1`.
-- Full artifact: `scripts/api-docs-runner/artifacts/getClients/response-200.json`
+### Error responses
+No error responses documented in the spec.
 
-## Notes
-- Filtering by name is not available in this endpoint; fetch all and filter client-side if needed.
+### Notes
+- Servers declared in spec: /api, /pto
 
 [Back to section](README.md) · [Back to index](../index.md)

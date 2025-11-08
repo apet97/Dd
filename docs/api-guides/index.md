@@ -53,4 +53,4 @@ payloads, include `Content-Type: application/json`.
 Generated from OpenAPI spec in repo on 2025-11-08 15:32:02 UTC.
 
 ## Known gaps
-- Automated sandbox runs currently cover the **Client** tag only; all other sections are generated from the schema and require live execution work.
+- Sandbox execution not yet automated; examples are schema-derived.

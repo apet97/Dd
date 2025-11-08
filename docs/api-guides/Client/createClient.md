@@ -1,112 +1,101 @@
-# POST /api/v1/workspaces/{workspaceId}/clients
+## POST /v1/workspaces/{workspaceId}/clients
+**Summary:** Add a new client
 
-**Summary:** Add a new client to the workspace.
+### Path parameters
+| Name | In | Type | Required | Default | Description |
+|------|----|------|----------|---------|-------------|
+| `workspaceId` | path | string | Yes |  | Represents workspace identifier across the system. |
 
-## Path parameters
-| Name | Type | Required | Description |
-|------|------|----------|-------------|
-| `workspaceId` | string | Yes | Clockify workspace identifier. |
+### Query parameters
+No parameters.
 
-## Query parameters
-_None._
+### Header parameters
+No parameters.
 
-## Request body
-- **Content type:** `application/json`
-- **Schema highlights:**
-  - `name` (string, required) – Client display name.
-  - `email` (string, optional) – Primary contact email.
-  - `note` (string, optional) – Internal note.
-
-**Example used in sandbox:**
+### Request body
+- **Media type:** `application/json`
+- **Required:** Yes
+- **Schema summary:**
+- `address` (string, optional) Represents client's address.
+- `email` (string, optional) Represents client email.
+- `name` (string, optional) Represents client name.
+- `note` (string, optional) Represents additional notes for the client.
+- **Minimal example:**
 ```json
 {
-  "email": "docs_test_20251108t154112z@example.com",
-  "name": "DOCS_TEST_20251108T154112Z_CLIENT",
-  "note": "Sandbox documentation seed client"
+  "address": "Ground Floor, ABC Bldg., Palo Alto, California, USA 94020",
+  "email": "clientx@example.com",
+  "name": "Client X",
+  "note": "This is a sample note for the client."
 }
 ```
 
-## Examples
-### curl
+### Code examples
 ```bash
-curl -X POST "https://developer.clockify.me/api/v1/workspaces/672f9cf4ad6f45299c3e3de2/clients" \
+curl -X POST "https://developer.clockify.me/v1/workspaces/{workspaceId}/clients" \
   -H 'X-Api-Key: <YOUR_API_KEY>' \
   -H 'Accept: application/json' \
-  -H 'Content-Type: application/json' \
-  -d '{"email":"docs_test_20251108t154112z@example.com","name":"DOCS_TEST_20251108T154112Z_CLIENT","note":"Sandbox documentation seed client"}'
+  -H 'Content-Type: application/json'
+  -d '{"address":"Ground Floor, ABC Bldg., Palo Alto, California, USA 94020","email":"clientx@example.com","name":"Client X","note":"This is a sample note for the client."}'
 ```
 
-### Node.js (fetch)
 ```javascript
 import fetch from 'node-fetch';
 
-const response = await fetch('https://developer.clockify.me/api/v1/workspaces/672f9cf4ad6f45299c3e3de2/clients', {
+const response = await fetch('https://developer.clockify.me/v1/workspaces/{workspaceId}/clients', {
   method: 'POST',
   headers: {
     'X-Api-Key': process.env.CLOCKIFY_API_KEY,
     'Accept': 'application/json',
-    'Content-Type': 'application/json'
+    'Content-Type': 'application/json',
   },
-  body: JSON.stringify({
-    email: 'docs_test_20251108t154112z@example.com',
-    name: 'DOCS_TEST_20251108T154112Z_CLIENT',
-    note: 'Sandbox documentation seed client'
-  })
+  body: JSON.stringify(/* TODO: provide payload */),
 });
-
 const data = await response.json();
 console.log(data);
 ```
 
-### Python (requests)
 ```python
 import os
 import requests
 
-url = "https://developer.clockify.me/api/v1/workspaces/672f9cf4ad6f45299c3e3de2/clients"
-payload = {
-    "email": "docs_test_20251108t154112z@example.com",
-    "name": "DOCS_TEST_20251108T154112Z_CLIENT",
-    "note": "Sandbox documentation seed client",
+url = 'https://developer.clockify.me/v1/workspaces/{workspaceId}/clients'
+headers = {
+    'X-Api-Key': os.environ['CLOCKIFY_API_KEY'],
+    'Accept': 'application/json',
+    'Content-Type': 'application/json',
 }
-response = requests.post(
-    url,
-    headers={
-        "X-Api-Key": os.environ["CLOCKIFY_API_KEY"],
-        "Accept": "application/json",
-        "Content-Type": "application/json",
-    },
-    json=payload,
-)
+payload = {/* TODO: provide payload */}
+response = requests.post(url, headers=headers, json=payload)
 response.raise_for_status()
 print(response.json())
 ```
 
-## Successful response
-**Status 201 – Created**
-
-````json
+### Success responses
+#### Status 201
+- Media type: `application/json`
+- Description: Created
+- Captured example: Not executed in sandbox yet.
+- Artifact: `scripts/api-docs-runner/artifacts/createClient-201.json`
+```json
 {
-  "address": null,
+  "address": "Ground Floor, ABC Bldg., Palo Alto, California, USA 94020",
   "archived": false,
-  "ccEmails": null,
+  "ccEmails": "clientx@example.com",
   "currencyCode": "USD",
-  "currencyId": "672f9cf4ad6f45299c3e3de3",
-  "email": "docs_test_20251108t154112z@example.com",
-  "id": "690f6498c0ee2a5143bd3dab",
-  "name": "DOCS_TEST_20251108T154112Z_CLIENT",
-  "note": "Sandbox documentation seed client",
-  "workspaceId": "672f9cf4ad6f45299c3e3de2"
+  "currencyId": "33t687e29ae1f428e7ebe505",
+  "email": "clientx@example.com",
+  "id": "44a687e29ae1f428e7ebe305",
+  "name": "Client X",
+  "note": "This is a sample note for the client.",
+  "workspaceId": "64a687e29ae1f428e7ebe303"
 }
-````
+```
 
-Full artifact: `scripts/api-docs-runner/artifacts/createClient/response-201.json`
+### Error responses
+No error responses documented in the spec.
 
-## Error examples
-- `409 Conflict` when a client with the same name already exists in the workspace.
-
-## Notes
-- The API automatically populates currency fields based on the workspace settings.
-- Use unique `DOCS_TEST_*` names when scripting documentation runs to avoid conflicts.
+### Notes
+- Servers declared in spec: /api, /pto
 
 [Back to section](README.md) · [Back to index](../index.md)
