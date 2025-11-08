@@ -1,0 +1,23 @@
+{
+  "status": "200",
+  "executed": false,
+  "example": {
+    "authToken": "eyJ0eXAiOiJKV1QiLCJhbGciOiJSUzI1NiJ9.eyJzdWIiOiI2NGI3YmU3YmUwODM1Yjc2ZDYzOTY5YTciLCJtdWx0aUZhY3RvciI6dHJ1ZSwiaXNzIjoiY2xvY2tpZnkiLCJuYW1lIjoiTWFydGluIExsb3lkIiwiZXhwIjoxNjkzMzY5MzEwLCJ0eXBlIjoiYWNjZXNzIiwiaWF0IjoxNjkzMzI2MTEwLCJqdGkiOiJZVGcxT0Raak9XTXRPRGRsWVMwME5qZ3hMVGxpTlRndE5UQmlOVEprTmpOaE",
+    "enabled": false,
+    "id": "76a687e29ae1f428e7ebe101",
+    "name": "stripe",
+    "triggerSource": [
+      "54a687e29ae1f428e7ebe909",
+      "87p187e29ae1f428e7ebej56"
+    ],
+    "triggerSourceType": {
+      "$ref": "#/components/schemas/WebhookEventTriggerSourceType"
+    },
+    "url": "https://example-clockify.com/stripeEndpoint",
+    "userId": "5a0ab5acb07987125438b60f",
+    "webhookEvent": {
+      "$ref": "#/components/schemas/WebhookEventType"
+    },
+    "workspaceId": "64a687e29ae1f428e7ebe303"
+  }
+}

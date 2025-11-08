@@ -1,0 +1,27 @@
+{
+  "status": "200",
+  "executed": false,
+  "example": {
+    "automaticTimeEntryCreation": {
+      "$ref": "#/components/schemas/AutomaticTimeEntryCreationDto"
+    },
+    "color": "#8BC34A",
+    "datePeriod": {
+      "$ref": "#/components/schemas/DatePeriod"
+    },
+    "everyoneIncludingNew": false,
+    "id": "5b715612b079875110791111",
+    "name": "New Year's Day",
+    "occursAnnually": true,
+    "userGroupIds": [
+      "5b715612b079875110791342",
+      "5b715612b079875110791324",
+      "5b715612b079875110793142"
+    ],
+    "userIds": [
+      "5b715612b079875110791432",
+      "5b715612b079875110791234"
+    ],
+    "workspaceId": "5b715612b079875110792222"
+  }
+}

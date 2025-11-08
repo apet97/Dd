@@ -1,0 +1,28 @@
+{
+  "status": "200",
+  "executed": false,
+  "example": {
+    "activeWorkspace": "64a687e29ae1f428e7ebe303",
+    "customFields": [
+      {
+        "$ref": "#/components/schemas/UserCustomFieldValueDtoV1"
+      }
+    ],
+    "defaultWorkspace": "64a687e29ae1f428e7ebe303",
+    "email": "johndoe@example.com",
+    "id": "5a0ab5acb07987125438b60f",
+    "memberships": [
+      {
+        "$ref": "#/components/schemas/MembershipDtoV1"
+      }
+    ],
+    "name": "John Doe",
+    "profilePicture": "https://www.url.com/profile-picture1234567890.png",
+    "settings": {
+      "$ref": "#/components/schemas/UserSettingsDtoV1"
+    },
+    "status": {
+      "$ref": "#/components/schemas/AccountStatus"
+    }
+  }
+}

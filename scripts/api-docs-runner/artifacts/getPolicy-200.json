@@ -1,0 +1,36 @@
+{
+  "status": "200",
+  "executed": false,
+  "example": {
+    "allowHalfDay": false,
+    "allowNegativeBalance": true,
+    "approve": {
+      "$ref": "#/components/schemas/ApproveDto"
+    },
+    "archived": true,
+    "automaticAccrual": {
+      "$ref": "#/components/schemas/AutomaticAccrualDto"
+    },
+    "automaticTimeEntryCreation": {
+      "$ref": "#/components/schemas/AutomaticTimeEntryCreationDto"
+    },
+    "everyoneIncludingNew": false,
+    "id": "5b715612b079875110791111",
+    "name": "Days",
+    "negativeBalance": {
+      "$ref": "#/components/schemas/NegativeBalanceDto"
+    },
+    "projectId": "string",
+    "timeUnit": "DAYS",
+    "userGroupIds": [
+      "5b715612b079875110791342",
+      "5b715612b079875110791324",
+      "5b715612b079875110793142"
+    ],
+    "userIds": [
+      "5b715612b079875110791432",
+      "5b715612b079875110791234"
+    ],
+    "workspaceId": "5b715612b079875110792222"
+  }
+}

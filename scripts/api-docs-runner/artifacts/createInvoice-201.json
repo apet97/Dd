@@ -1,0 +1,13 @@
+{
+  "status": "201",
+  "executed": false,
+  "example": {
+    "billFrom": "Business X",
+    "clientId": "34p687e29ae1f428e7ebe562",
+    "currency": "USD",
+    "dueDate": "2020-06-01T08:00:00Z",
+    "id": "78a687e29ae1f428e7ebe303",
+    "issuedDate": "2020-01-01T08:00:00Z",
+    "number": "202306121129"
+  }
+}

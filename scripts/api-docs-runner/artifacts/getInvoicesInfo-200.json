@@ -1,0 +1,12 @@
+{
+  "status": "200",
+  "executed": false,
+  "example": {
+    "invoices": [
+      {
+        "$ref": "#/components/schemas/InvoiceInfoV1"
+      }
+    ],
+    "total": 100
+  }
+}

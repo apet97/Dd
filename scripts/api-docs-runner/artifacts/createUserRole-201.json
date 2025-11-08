@@ -1,0 +1,9 @@
+{
+  "status": "201",
+  "executed": false,
+  "example": [
+    {
+      "$ref": "#/components/schemas/RoleDetailsDtoV1"
+    }
+  ]
+}

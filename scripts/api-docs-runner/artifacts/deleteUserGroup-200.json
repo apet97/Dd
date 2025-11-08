@@ -1,0 +1,19 @@
+{
+  "status": "200",
+  "executed": false,
+  "example": {
+    "id": "76a687e29ae1f428e7ebe101",
+    "name": "development_team",
+    "teamManagers": [
+      {
+        "id": "672323eb0024343a1585e8a7",
+        "name": "Jane Doe"
+      }
+    ],
+    "userIds": [
+      "5a0ab5acb07987125438b60f",
+      "98j4b5acb07987125437y32"
+    ],
+    "workspaceId": "64a687e29ae1f428e7ebe303"
+  }
+}

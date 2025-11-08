@@ -1,0 +1,21 @@
+{
+  "status": "200",
+  "executed": false,
+  "example": {
+    "chart": [
+      {
+        "$ref": "#/components/schemas/SummaryReportChartDto"
+      }
+    ],
+    "groupOne": [
+      {
+        "$ref": "#/components/schemas/GroupOneDto"
+      }
+    ],
+    "totals": [
+      {
+        "$ref": "#/components/schemas/TimeEntryReportTotals"
+      }
+    ]
+  }
+}

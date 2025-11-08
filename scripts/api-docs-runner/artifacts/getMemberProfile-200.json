@@ -1,0 +1,20 @@
+{
+  "status": "200",
+  "executed": false,
+  "example": {
+    "email": "johndoe@example.com",
+    "hasPassword": false,
+    "hasPendingApprovalRequest": false,
+    "imageUrl": "https://www.url.com/imageurl-1234567890.jpg",
+    "name": "John Doe",
+    "userCustomFieldValues": [
+      {
+        "$ref": "#/components/schemas/UserCustomFieldValueFullDtoV1"
+      }
+    ],
+    "weekStart": "MONDAY",
+    "workCapacity": "PT7H",
+    "workingDays": "[\"MONDAY\",\"TUESDAY\",\"WEDNESDAY\",\"THURSDAY\",\"FRIDAY\"]",
+    "workspaceNumber": 3
+  }
+}

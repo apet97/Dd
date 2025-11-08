@@ -1,0 +1,25 @@
+{
+  "status": "200",
+  "executed": false,
+  "example": {
+    "balance": 1,
+    "balanceDiff": 1,
+    "createdAt": "2022-08-26T08:32:01.640708Z",
+    "id": "5b715612b079875110791111",
+    "note": "Time Off Request Note",
+    "policyId": "5b715612b079875110792333",
+    "policyName": "Days",
+    "requesterUserId": "5b715612b0798751107925555",
+    "requesterUserName": "John",
+    "status": {
+      "$ref": "#/components/schemas/PtoTimeOffRequestStatus"
+    },
+    "timeOffPeriod": {
+      "$ref": "#/components/schemas/TimeOffRequestPeriod"
+    },
+    "timeUnit": "DAYS",
+    "userId": "5b715612b079875110794444",
+    "userName": "Nicholas",
+    "workspaceId": "5b715612b079875110792222"
+  }
+}

@@ -1,0 +1,13 @@
+{
+  "status": "201",
+  "executed": false,
+  "example": {
+    "customFieldId": "5e4117fe8c625f38930d57b7",
+    "customFieldName": "TIN",
+    "customFieldType": {
+      "$ref": "#/components/schemas/CustomFieldType"
+    },
+    "userId": "5a0ab5acb07987125438b60f",
+    "value": "20231211-12345"
+  }
+}
